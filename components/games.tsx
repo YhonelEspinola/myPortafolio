@@ -4,12 +4,9 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-// Tamaño del laberinto
 const mazeSize = { rows: 15, cols: 20 };
 
-// Matriz del laberinto
 const generateMaze = () => {
-  // 0: camino, 1: pared, 2: salida
   const maze = Array(mazeSize.rows)
     .fill(null)
     .map(() => Array(mazeSize.cols).fill(0));
@@ -193,7 +190,6 @@ const GamesPlayer = () => {
     "/about-me",
   ];
 
-  // Manejar movimiento
   const handleMove = (direction: String) => {
     const { row, col } = playerPos;
     let newRow = row;
@@ -204,11 +200,9 @@ const GamesPlayer = () => {
     if (direction === "left") newCol = Math.max(col - 1, 0);
     if (direction === "right") newCol = Math.min(col + 1, mazeSize.cols - 1);
 
-    // Comprobar si el movimiento es válido (no atravesar paredes)
     if (maze[newRow][newCol] !== 1) {
       setPlayerPos({ row: newRow, col: newCol });
 
-      // Comprobar si el jugador llega a una salida
       if (maze[newRow][newCol] === 2) {
         const exitIndex = [
           { row: 0, col: 0 },
@@ -224,7 +218,6 @@ const GamesPlayer = () => {
     }
   };
 
-  // Detección de teclas
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "ArrowUp") handleMove("up");
     if (event.key === "ArrowDown") handleMove("down");
@@ -233,39 +226,41 @@ const GamesPlayer = () => {
   };
 
   return (
-    <div
-      ref={mazeRef}
-      className="w-full h-full grid"
-      style={{
-        gridTemplateRows: `repeat(${mazeSize.rows}, 1fr)`,
-        gridTemplateColumns: `repeat(${mazeSize.cols}, 1fr)`,
-      }}
-      tabIndex={0} // Permitir que div detecte teclas
-      onKeyDown={handleKeyDown}
-    >
-      {maze.map((row, rowIndex) =>
-        row.map((cell, colIndex) => (
-          <div
-            key={`${rowIndex}-${colIndex}`}
-            className={`border ${
-              cell === 1
-                ? "bg-gray-700"
-                : cell === 2
-                ? "bg-green-500"
-                : "bg-white"
-            }`}
-          >
-            {playerPos.row === rowIndex && playerPos.col === colIndex && (
-              <motion.div
-                className="w-full h-full bg-blue-500"
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-              />
-            )}
-          </div>
-        ))
-      )}
-    </div>
+    <>
+      <div
+        ref={mazeRef}
+        className="w-full h-full grid"
+        style={{
+          gridTemplateRows: `repeat(${mazeSize.rows}, 1fr)`,
+          gridTemplateColumns: `repeat(${mazeSize.cols}, 1fr)`,
+        }}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+      >
+        {maze.map((row, rowIndex) =>
+          row.map((cell, colIndex) => (
+            <div
+              key={`${rowIndex}-${colIndex}`}
+              className={`border ${
+                cell === 1
+                  ? "bg-gray-700"
+                  : cell === 2
+                  ? "bg-green-500"
+                  : "bg-white"
+              }`}
+            >
+              {playerPos.row === rowIndex && playerPos.col === colIndex && (
+                <motion.div
+                  className="w-full h-full bg-blue-500"
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                />
+              )}
+            </div>
+          ))
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,12 +1,9 @@
 import CoverParticules from "@/components/cover-particles";
 import GamesPlayer from "@/components/games";
-import Introduction from "@/components/introduction";
-import TransitionPage from "@/components/transition-page";
 
 export default function Home() {
   return (
     <main>
-      <TransitionPage />
       <div className="flex min-h-[100vh] h-full bg-no-repeat bg-gradient-cover">
         <CoverParticules />
         <div className="w-full h-screen flex justify-center items-center bg-gradient-to-r ">

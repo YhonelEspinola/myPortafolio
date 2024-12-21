@@ -4,8 +4,6 @@ import TransitionPage from "@/components/transition-page";
 const PagePage = () => {
   return (
     <>
-      <TransitionPage />
-
       <Introduction />
     </>
   );

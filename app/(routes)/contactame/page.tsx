@@ -4,7 +4,6 @@ import { dataPerfil } from "@/data";
 const ContactMe = () => {
   return (
     <>
-      <TransitionPage />
       <div className="flex flex-col justify-center h-lvh">
         <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5">
           Contactame
