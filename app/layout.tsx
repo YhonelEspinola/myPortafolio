@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
+
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 const urbanist = Urbanist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Mi Portafolio",
-  description: "Portafolio sobre mi trabajo como desarrollador",
+  title: "Yhonel Espinola",
+  description: "Personal portfolio",
 };
 
 export default function RootLayout({
@@ -19,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable} ${urbanist.variable} antialiased`}>
+      <body className={urbanist.className}>
+        <Navbar />
+        <Header />
         {children}
       </body>
     </html>

@@ -1,281 +1,258 @@
+import { desc } from "framer-motion/client";
 import {
   BookText,
   CodeSquare,
   HomeIcon,
   UserRound,
   Linkedin,
-  Twitter,
   Rss,
-  Twitch,
-  Youtube,
-  Crop,
-  Pencil,
   Computer,
-  Book,
-  Rocket,
   Speech,
+  Github,
+  Instagram,
+  Facebook,
+  Play,
+  Gamepad,
 } from "lucide-react";
 
 export const socialNetworks = [
   {
     id: 1,
-    logo: <Youtube size={30} strokeWidth={1} />,
-    src: "#!",
+    logo: <Linkedin size={30} strokeWidth={1} />,
+    src: "https://www.linkedin.com/in/osmer-yhonel-b70819184/",
   },
   {
     id: 2,
-    logo: <Linkedin size={30} strokeWidth={1} />,
-    src: "#!",
-  },
-  {
-    id: 3,
-    logo: <Twitter size={30} strokeWidth={1} />,
-    src: "#!",
-  },
-  {
-    id: 4,
     logo: <Rss size={30} strokeWidth={1} />,
     src: "#!",
   },
   {
+    id: 3,
+    logo: <Github size={30} strokeWidth={1} />,
+    src: "https://github.com/YhonelEspinola",
+  },
+  {
+    id: 4,
+    logo: <Instagram size={30} strokeWidth={1} />,
+    src: "https://www.instagram.com/yhonelespinola/",
+  },
+  {
     id: 5,
-    logo: <Twitch size={30} strokeWidth={1} />,
-    src: "#!",
+    logo: <Facebook size={30} strokeWidth={1} />,
+    src: "https://www.facebook.com/YhonelEspinola",
   },
 ];
 
 export const itemsNavbar = [
   {
     id: 1,
-    title: "Home",
-    icon: <HomeIcon size={25} color="#fff" strokeWidth={1} />,
-    link: "/",
+    title: "Game",
+    icon: <Gamepad size={25} color="#fff" strokeWidth={1} />,
+    link: "/game",
   },
   {
     id: 2,
+    title: "Home",
+    icon: <HomeIcon size={25} color="#fff" strokeWidth={1} />,
+    link: "/intro",
+  },
+  {
+    id: 3,
     title: "User",
     icon: <UserRound size={25} color="#fff" strokeWidth={1} />,
     link: "/about-me",
   },
   {
-    id: 3,
+    id: 4,
     title: "Book",
-    icon: <BookText size={25} color="#fff" strokeWidth={1} />,
+    icon: <Computer size={25} color="#fff" strokeWidth={1} />,
     link: "/services",
   },
   {
-    id: 4,
+    id: 5,
     title: "Target",
     icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
     link: "/portfolio",
   },
   {
-    id: 5,
+    id: 6,
     title: "Home",
     icon: <Speech size={25} color="#fff" strokeWidth={1} />,
-    link: "/testimonials",
+    link: "/contactame",
   },
 ];
 
 export const dataAboutPage = [
   {
     id: 1,
-    title: "Frontend Developer",
-    subtitle: "TechSolutions",
+    title:
+      "Participé en mi primer concurso relacionado con aplicaciones móviles.",
+    subtitle: "Empresa NTT Data",
     description:
-      "Colabora con un equipo dinámico para desarrollar interfaces de usuario atractivas y funcionales que impulsen el éxito de nuestros clientes en el mundo digital.",
-    date: "Nov 2023 ",
+      "Comparti una experiencia unica en esta empresa ya que nos pidieron proponer un prototipo de aplicacion movil para resolver una problematica de mi ciudad, fue una gran oportunidad ya que pude compartir con demas alumnos de otras universides e institos lo que me permitió enriquecer mis conocimientos, intercambiar ideas y fortalecer mis habilidades blandas.",
+    date: "Nov 2024",
+    imageUrl: "/certi.png",
   },
   {
     id: 2,
-    title: "Creador de Experiencias Digitales",
-    subtitle: "PixelCrafters",
+    title: "Descrubro el mundo maravilloso del desarrolo movil, android.",
+    subtitle: "Curso de desarrollo de aplicaciones móviles en Android Studio",
     description:
-      "Trabaja en proyectos emocionantes que desafían los límites de la creatividad y la tecnología. Únete a nosotros mientras creamos experiencias digitales cautivadoras que inspiran y cautivan a nuestros usuarios.",
-    date: "May 2021",
+      "Aprendi a desarrollar aplicaciones móviles nativas para Android utilizando Kotlin, Firebase y Android Studio. Fue un curso muy bonito en el cual aprendi todo lo necesario para empezar a desarrollar aplicaciones moviles, las habilidades que gane las puse en practica en diferentes proyectos.",
+    date: "Mar 2024",
+    imageUrl: "/go.png",
   },
   {
     id: 3,
-    title: "Especialista en Desarrollo Frontend",
-    subtitle: "CodeForge Solutions",
+    title: "Descubro el mundo de los microservicios",
+    subtitle: "Curso de microservicios en Java Spring Boot",
     description:
-      "Como desarrollador frontend, tendrás la oportunidad de colaborar en proyectos diversos y desafiantes que te permitirán expandir tus habilidades y dejar tu huella en el mundo digital.",
-    date: "Ago 2019",
+      "Aprendi a desarrollar aplicaciones escalables y fáciles de mantener utilizando microservicios en Java Spring Boot.",
+    date: "sept 2023",
+    imageUrl: "/ww.png",
   },
   {
     id: 4,
-    title: "Prácticas Grado",
-    subtitle: "WebWizards Inc.",
+    title: "Empiezo mi carrera profesional",
+    subtitle: "Computacion e informatica",
     description:
-      "Únete a nosotros mientras creamos sitios web y aplicaciones interactivas que sorprenden y deleitan a nuestros clientes. Si tienes pasión por el diseño y la programación, y disfrutas colaborar en un entorno creativo, ¡queremos conocerte!        ",
-    date: "Mar 2018",
-  },
-];
-
-export const dataCounter = [
-  {
-    id: 0,
-    endCounter: 10,
-    text: "Años de experiencia",
-    lineRight: true,
-    lineRightMobile: true,
-  },
-  {
-    id: 1,
-    endCounter: 80,
-    text: "Clientes satisfechos",
-    lineRight: true,
-    lineRightMobile: false,
-  },
-  {
-    id: 2,
-    endCounter: 220,
-    text: "Proyectos finalizados",
-    lineRight: true,
-    lineRightMobile: true,
-  },
-  {
-    id: 3,
-    endCounter: 30,
-    text: "Premios ganadores",
-    lineRight: false,
-    lineRightMobile: false,
+      "Descubro el mundo maravilloso de la tecnologia y la informatica, desde que lo descubri me apasiono la programacion y el desarrollo web, por eso decido estudiar la carrera tecnica.",
+    date: "Mar 2022",
+    imageUrl: "/compu.png",
   },
 ];
 
 export const serviceData = [
   {
-    icon: <Crop />,
-    title: "Branding",
+    image: "/ko.png",
+    title: "Kotlin",
     description:
-      "Desarrollo de una identidad de marca sólida y coherente, incluyendo diseño de logotipo, colores y elementos visuales",
+      "Desarrollo de aplicaciones móviles nativas para Android utilizando Kotlin.",
   },
   {
-    icon: <Pencil />,
-    title: "Diseño web",
+    image: "/icon-spring-boot.svg",
+    title: "Spring Boot",
     description:
-      "Diseño creativo y profesional de interfaces web intuitivas y atractivas, centradas en la experiencia del usuario",
+      "Desarrollo de APIs y microservicios utilizando Java Spring Boot.",
   },
   {
-    icon: <Computer />,
-    title: "Desarrollo web",
+    image: "/icon-java.svg",
+    title: "Java",
     description:
-      "Diseño y desarrollo de sitios web a medida, adaptados a tus necesidades",
+      "Desarrollo de aplicaciones de escritorio y web utilizando Java.",
+  },
+
+  {
+    image: "/icon-sql-server.svg",
+    title: "SQL Server",
+    description:
+      "Diseño y administración de bases de datos utilizando SQL Server.",
   },
   {
-    icon: <Book />,
-    title: "Copywriting",
-    description:
-      "Creación de contenido persuasivo y atractivo que capta la atención de tu audiencia",
+    image: "/icon-my-sql.svg",
+    title: "MySql",
+    description: "Diseño y administración de bases de datos utilizando MySql.",
   },
   {
-    icon: <Rocket />,
-    title: "SEO",
+    image: "/mongodb.png",
+    title: "MongoDB",
     description:
-      "Optimización de tu presencia en línea mediante estrategias de SEO avanzadas, ",
+      "Diseño y administración de bases de datos utilizando MongoDB.",
+  },
+  {
+    image: "/icon-react.svg",
+    title: "React",
+    description:
+      " Desarrollo de aplicaciones web utilizando React, Next.js y Tailwind CSS.",
+  },
+  {
+    image: "/icon-postman.svg",
+    title: "Postman",
+    description:
+      "Pruebas de integración y documentación de APIs utilizando Postman.",
+  },
+
+  {
+    image: "/icon-git.svg",
+    title: "Git",
+    description:
+      "Control de versiones y colaboración en proyectos utilizando Git.",
+  },
+  {
+    image: "/icon-github.svg",
+    title: "GitHub",
+    description:
+      "Gestión de repositorios y colaboración en proyectos utilizando GitHub.",
+  },
+  {
+    image: "/icon-html.svg",
+    title: "Html",
+    description: "Desarrollo de sitios web utilizando HTML.",
+  },
+  {
+    image: "/icon-css.svg",
+    title: "Css",
+    description: " Diseño y estilización de sitios web utilizando CSS.",
+  },
+  {
+    image: "/icon-javascript.svg",
+    title: "JavaScript",
+    description:
+      "Desarrollo de aplicaciones web interactivas utilizando JavaScript.",
   },
 ];
 
 export const dataPortfolio = [
   {
     id: 1,
-    title: "Web Pro",
-    image: "/image-1.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
+    title: "Aplicación móvil para Comercial Zabaleta",
+    description:
+      "Aplicación móvil para Android, desarrollada en equipo como proyecto académico para la tienda Comercial Zavaleta",
+    image: "/inicioApp.jpg",
+    urlGithub: "https://github.com/YhonelEspinola/appmobile",
   },
   {
     id: 2,
-    title: "Desarrollo Web Ágil",
-    image: "/image-2.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
+    title: "Aplicación móvil de recetas de cocina",
+    description:
+      "Aplicación móvil para Android, el cual permite a los usuarios buscar recetas de cocina y guardar sus favoritas. Ademas de publicar sus propias recetas.",
+    image: "/appRecetas.jpg",
+    urlGithub: "https://github.com/YhonelEspinola/recetasApp",
   },
   {
     id: 3,
-    title: "Estrategias Web",
-    image: "/image-3.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
+    title: "Aplicación móvil de Eventos para Cibertec",
+    description:
+      "Aplicación móvil para Android, desarrollada en equipo como proyecto académico para el instito Cibertec",
+    image: "/eventosApp.jpg",
+    urlGithub: "https://github.com/YhonelEspinola/eventosApp",
   },
   {
     id: 4,
-    title: "Ideas Creativas",
-    image: "/image-4.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
+    title: "Aplicación móvil TodoList",
+    description:
+      "Aplicación móvil para Android, desarrollada en equipo como proyecto académico, la aplicacion permite a los usuarios registrar un proyecto y asignar tareas a los miembros invitados por medio de un correo ",
+    image: "/appTodoList.jpg",
+    urlGithub: "https://github.com/YhonelEspinola/appTodoList_",
   },
   {
     id: 5,
-    title: "Webs Impactantes",
-    image: "/image-5.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 6,
-    title: "Web Dinámica",
-    image: "/image-6.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 7,
-    title: "Dark Web ",
-    image: "/image-7.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 8,
-    title: "E-commerce web",
-    image: "/image-8.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
+    title: "Aplicación móvil de NotiFlash",
+    description:
+      "Aplicación móvil para Android, esta app permite a los usuarios registrar noticias al instante y compartirlas con todos los usuarios de la app",
+    image: "/notiFlash.jpg",
+    urlGithub: "https://github.com/YhonelEspinola/eventosApp",
   },
 ];
 
-export const dataTestimonials = [
+export const dataPerfil = [
   {
     id: 1,
-    name: "George Snow",
+    name: "Osmer Yhonel Espinola Narcizo",
     description:
-      "¡Increíble plataforma! Los testimonios aquí son genuinos y me han ayudado a tomar decisiones informadas. ¡Altamente recomendado!",
-    imageUrl: "/profile1.png",
-  },
-  {
-    id: 2,
-    name: "Juan Pérez",
-    description:
-      "Me encanta la variedad de testimonios disponibles en esta página. Es inspirador ver cómo otras personas han superado desafíos similares a los míos. ¡Gracias por esta invaluable fuente de motivación!",
-    imageUrl: "/profile2.png",
-  },
-  {
-    id: 3,
-    name: "María García",
-    description:
-      "Excelente recurso para obtener opiniones auténticas sobre diferentes productos y servicios. Me ha ayudado mucho en mis compras en línea. ¡Bravo por este sitio!",
-    imageUrl: "/profile3.png",
-  },
-  {
-    id: 4,
-    name: "Laura Snow",
-    description:
-      "¡Qué descubrimiento tan fantástico! Los testimonios aquí son honestos y detallados. Me siento más seguro al tomar decisiones después de leer las experiencias compartidas por otros usuarios.",
-    imageUrl: "/profile4.png",
-  },
-  {
-    id: 5,
-    name: "Carlos Sánchez",
-    description:
-      "Una joya en la web. Los testimonios son fáciles de encontrar y están bien organizados. ¡Definitivamente mi destino número uno cuando necesito referencias confiables!",
-    imageUrl: "/profile5.png",
-  },
-  {
-    id: 6,
-    name: "Antonio Martínez",
-    description:
-      "¡Fantástico recurso para aquellos que buscan validación antes de tomar decisiones importantes! Los testimonios aquí son veraces y realmente útiles. ¡Gracias por simplificar mi proceso de toma de decisiones!",
-    imageUrl: "/profile6.png",
+      "Actualmente, estoy en búsqueda de oportunidades laborales. Si consideras que mis habilidades y experiencia pueden aportar valor a tu equipo, estaré encantado de sumarte a tu equipo de trabajo. No dudes en contactarme.",
+    imageUrl: "/perfilY.png",
+    correo: "osmeryhonel890@gmail.com",
+    UrlCv: "CV Espinola Narcizo.pdf",
   },
 ];
