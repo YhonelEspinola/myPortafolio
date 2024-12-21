@@ -1,5 +1,4 @@
 import GamesPlayer from "@/components/games";
-import TransitionPage from "@/components/transition-page";
 
 const PagePage = () => {
   return (

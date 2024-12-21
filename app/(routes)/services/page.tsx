@@ -1,5 +1,4 @@
 import SliderTecnologias from "@/components/slider-tecnologias";
-import TransitionPage from "@/components/transition-page";
 
 const ServicePage = () => {
   return (

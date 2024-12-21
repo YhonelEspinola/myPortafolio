@@ -1,4 +1,3 @@
-import TransitionPage from "@/components/transition-page";
 import { dataPerfil } from "@/data";
 
 const ContactMe = () => {
